@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient_2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TitleLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_string"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ems="10"
+            android:hint="@string/enter_title_string"
+            android:inputType="textShortMessage"
+            android:textColor="#FFFFFF" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_priority_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+      
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/statusGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:background="#FF8800"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/statusDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/done_string"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/statusNotDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/not_done_string"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/priorityGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#FF8800"
+            android:orientation="vertical"
+            android:text="@string/priority_string" >
+
+            <RadioButton
+                android:id="@+id/lowPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priority_low_string"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/medPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/priority_medium_string"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/highPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priority_high_string"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/set_date_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient_1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/date_picker_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:gravity="left|center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_date_48x48"
+            
+            android:text="Choose Date"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+       
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/set_time_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient_2"
+        android:orientation="horizontal" >
+
+       
+        <Button
+            android:id="@+id/time_picker_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/btn_time_48x48"
+            android:text="Choose Time"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+      <LinearLayout
+        android:id="@+id/set_alarm_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient_1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/alarm_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left|center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_alarm_48x48"
+            android:text="Choose alarm"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_reset_cancel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_close_48x48"
+            android:text="cancel"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/resetButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_undo_48x48"
+            android:text="Reset"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/submitButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_add_48x48"
+            android:text="Add"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>
